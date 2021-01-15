@@ -1,3 +1,8 @@
+begin
+  require 'aws-sdk'
+rescue LoadError => e
+end
+
 if !defined?(Aws::S3::Resource) or !defined?(Aws::Credentials)
   raise "Error: `Aws::S3::Resource` and/or `Aws::Credentials` are not defined.\n\n"\
         "Please `require 'aws-sdk'` - or another library that defines these classes."

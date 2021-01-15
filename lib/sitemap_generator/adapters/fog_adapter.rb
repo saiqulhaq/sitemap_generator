@@ -1,3 +1,8 @@
+begin
+  require 'fog'
+rescue LoadError => e
+end
+
 if !defined?(Fog::Storage)
   raise "Error: `Fog::Storage` is not defined.\n\n"\
         "Please `require 'fog'` - or another library that defines this class."
